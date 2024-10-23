@@ -1,0 +1,193 @@
+/* Reset default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and Background */
+body {
+    font-family: 'Poppins', sans-serif; /* Changed to a modern, stylish font */
+    background: linear-gradient(135deg, #1e1e2f, #151515); /* Gradient background */
+    color: #f0f0f0;
+    line-height: 1.6;
+    overflow-x: hidden;
+    padding: 20px;
+}
+
+/* Main Container */
+.container {
+    width: 85%;
+    max-width: 1200px;
+    margin: 50px auto;
+    background-color: rgba(255, 255, 255, 0.05); /* Transparent white box for a sleek look */
+    padding: 40px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.6);
+    border-radius: 20px;
+    backdrop-filter: blur(10px);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.container:hover {
+    transform: scale(1.02); /* Slight scaling for hover effect */
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+/* Header Section */
+.header {
+    text-align: center;
+    padding-bottom: 30px;
+    border-bottom: 2px solid #e74c3c;
+}
+
+.profile-pic {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    border: 5px solid #e74c3c;
+    box-shadow: 0 8px 20px rgba(231, 76, 60, 0.6);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.profile-pic img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+
+h1 {
+    font-size: 3rem;
+    color: #ffffff;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: color 0.3s ease;
+}
+
+.header p {
+    font-size: 1.2rem;
+    color: #bbbbbb;
+}
+
+.header p a {
+    color: #e74c3c;
+    text-decoration: none;
+}
+
+.header p a:hover {
+    color: #ffffff;
+    text-decoration: underline;
+}
+
+/* Links in the header */
+.links {
+    margin-top: 15px;
+}
+
+.links a {
+    color: #e74c3c;
+    font-weight: 600;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1rem;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+.links a:hover {
+    color: #ffffff;
+    transform: scale(1.1);
+}
+
+/* Box styling */
+.box {
+    padding: 25px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.4);
+    margin-bottom: 40px;
+    transition: transform 0.4s ease, background-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.box:hover {
+    background-color: rgba(255, 255, 255, 0.15);
+    transform: translateY(-10px); /* Lifted hover effect */
+    box-shadow: 0 12px 30px rgba(255, 82, 82, 0.5);
+}
+
+/* Section Titles */
+.section h2 {
+    font-size: 2.2rem;
+    color: #eeeeee;
+    margin-bottom: 20px;
+    position: relative;
+    display: inline-block;
+}
+
+.section h2::after {
+    content: '';
+    width: 80px;
+    height: 3px;
+    background-color: #e74c3c;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transition: width 0.3s ease;
+}
+
+.section h2:hover::after {
+    width: 100px; /* Line grows when hovering over heading */
+}
+
+/* Section content */
+.section ul {
+    list-style: none;
+    padding-left: 20px;
+}
+
+.section ul li {
+    margin-bottom: 10px;
+    line-height: 1.6;
+    font-size: 1.1rem;
+    color: #d9d9d9;
+    transition: color 0.3s ease;
+}
+
+.section ul li:hover {
+    color: #ffffff; /* Text brightens on hover */
+}
+
+/* Footer Styling */
+footer {
+    text-align: center;
+    margin-top: 50px;
+    color: #bbbbbb;
+}
+
+footer p {
+    font-size: 0.9rem;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: #1c1c1c;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: #e74c3c;
+    border-radius: 10px;
+}
+
+/* Smooth transitions for hover effects */
+.box:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: translateY(-10px);
+    box-shadow: 0 12px 30px rgba(231, 76, 60, 0.6);
+    transition: all 0.4s ease;
+}
+

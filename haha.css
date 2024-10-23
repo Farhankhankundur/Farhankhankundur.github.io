@@ -1,0 +1,294 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #b7b4b4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+    overflow-x: hidden; /* Add this to prevent horizontal scrollbar */
+}
+
+/* Navbar */
+.navbar {
+    background-color: #dbdbdb;
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+    position: fixed; /* Add this to make navbar sticky */
+    top: 0;
+    width: 100%;
+    z-index: 1000; /* Add this to ensure navbar is on top of other elements */
+}
+
+.navbar-brand img {
+    height: 90px;
+    transition: transform 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Add a subtle shadow to the logo */
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.7)); /* Increase shadow on hover */
+}
+
+.navbar-nav .nav-link {
+    color: #510000;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    padding: 12px 25px;
+    background-color: #000000;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for emphasis */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Merriweather', serif; /* Unique font for navbar items */
+    position: relative; /* Add this to enable pseudo-elements */
+}
+
+.navbar-nav .nav-link::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #ff6347; /* Add a subtle orange background on hover */
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6347;
+    background-color: #001122;
+    transform: translateY(-5px) scale(1.05); /* Lift and slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.navbar-nav .nav-link:hover::before {
+    transform: scaleX(1);
+}
+
+/* Define Keyframes for the Slide-in Animation */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 1;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('3.avif') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 140px 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    animation: slideInFromTop 0.8s ease-out; /* Apply the animation */
+    overflow: hidden; /* Add this to prevent hero section from overflowing */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-photo {
+    width: 275px;
+    height: 260px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    filter: drop-shadow(0 0 10px rgba(0, 0, 0, 0.5)); /* Add a subtle shadow to the photo */
+}
+
+.hero-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+    filter: drop-shadow(0 0 15px rgba(0, 0, 0, 0.7));
+}
+
+.hero h1 {
+    font-family: 'Merriweather', serif; /* Unique font for headings */
+    font-size: 4.5rem;
+    margin: 0;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.7),  
+        -1px -1px 2px rgba(0, 0, 0, 0.7),
+        1px -1px 2px rgba(0, 0, 0, 0.7),
+        -1px  1px 2px rgba(0, 0, 0, 0.7);
+    transition: font-size 0.3s ease;
+}
+
+.hero h1:hover {
+    font-size: 4.8rem;
+    text-shadow: 
+        2px 2px 4px rgba(0, 0, 0, 0.8),  
+        -2px -2px 4px rgba(0, 0, 0, 0.8),
+        2px -2px 4px rgba(0, 0, 0, 0.8),
+        -2px  2px 4px rgba(0, 0, 0, 0.8);
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    font-weight: 300;
+    transition: font-size 0.3s ease;
+    color: #fff; /* Set font color to white */
+}
+
+.hero p:hover {
+    font-size: 1.8rem;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    font-family: 'Georgia', serif; /* Change font style */
+    font-size: 18px; /* Increase font size */
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: #333; /* Set a comfortable text color */
+    padding: 20px; /* Add some padding to the container */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle shadow to the container */
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    border-radius: 15px; /* More rounded section edges */
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap for better spacing */
+    justify-content: center;
+    transition: gap 0.3s ease;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease, transform 0.3s ease;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0); /* Vibrant gradient background */
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    z-index: 1;
+    color: #fff; /* White text for contrast */
+    padding: 20px; /* Add some padding to the card */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Subtle light overlay */
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and zoom effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card-body {
+    padding: 25px;
+    text-align: center;
+}
+
+.card-title {
+    font-size: 1.8rem;
+    margin-bottom: 15px;
+    font-weight: 700;
+    transition: font-size 0.3s ease, color 0.3s ease;
+}
+
+.card-title:hover {
+    font-size: 2rem;
+    color: #ff6347; /* Change color on hover for emphasis */
+}
+
+.card-text {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+    transition: font-size 0.3s ease, color 0.3s ease;
+    color: #ffffff; /* Set card text color to white */
+}
+
+.card-text:hover {
+    font-size: 1.3rem;
+    color: #f1f1f1; /* Slight color change on hover */
+}
+
+.card button {
+    background-color: #001122;
+    color: #fff;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.2rem;
+    border-radius: 25px;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Button shadow */
+}
+
+.card button:hover {
+    background-color: #ff6347;
+    transform: translateY(-5px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Footer */
+.footer {
+    background-color: #001122;
+    padding: 30px;
+    color: #fff;
+    text-align: center;
+    font-size: 1.2rem;
+    font-family: 'Poppins', sans-serif;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.footer a {
+    color: #ff6347;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer a:hover {
+    color: #ffd700; /* Change color on hover */
+}
+
+.footer p {
+    margin: 0;
+}
+
+   

@@ -1,0 +1,502 @@
+/* General Styles */
+body {
+    font-family: 'Poppins', sans-serif;
+    background-color: #b7b4b4;
+    color: #333;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: background-color 0.3s ease;
+}
+
+/* Navbar */
+.navbar {
+    background-color: #dbdbdb;
+    padding: 20px 30px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease;
+}
+
+.navbar-brand img {
+    height: 90px;
+    transition: transform 0.3s ease;
+}
+
+.navbar-brand img:hover {
+    transform: scale(1.1);
+}
+
+.navbar-nav .nav-link {
+    color: #510000;
+    font-size: 1.5rem;
+    margin-right: 20px;
+    padding: 12px 25px;
+    background-color: #000000;
+    border-radius: 20px; /* More rounded corners */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Deeper shadow for emphasis */
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    font-family: 'Merriweather', serif; /* Unique font for navbar items */
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ff6347;
+    background-color: #001122;
+    transform: translateY(-5px) scale(1.05); /* Lift and slight zoom effect on hover */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+/* Define Keyframes for the Slide-in Animation */
+@keyframes slideInFromTop {
+    from {
+        transform: translateY(-100%);
+        opacity: 0;
+    }
+    to {
+        transform: translateY(0);
+        opacity: 2;
+    }
+}
+
+/* Hero Section */
+.hero {
+    background: url('3.avif') no-repeat center center/cover;
+    color: #fff;
+    text-align: center;
+    padding: 140px 20px;
+    position: relative;
+    transition: background-color 0.3s ease;
+    animation: slideInFromTop 0.8s ease-out; /* Apply the animation */
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-photo {
+    width: 275px;
+    height: 260px;
+    border-radius: 50%;
+    border: 10px solid #fff;
+    margin-bottom: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero-photo:hover {
+    transform: scale(1.1);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.4);
+}
+
+.hero h1 {
+    font-family: 'Merriweather', serif; /* Unique font for headings */
+    font-size: 4.5rem;
+    margin: 0;
+    font-weight: 700;
+    color: #fff;
+    text-shadow: 
+        1px 1px 2px rgba(0, 0, 0, 0.7),  
+       -1px -1px 2px rgba(0, 0, 0, 0.7),
+        1px -1px 2px rgba(0, 0, 0, 0.7),
+       -1px  1px 2px rgba(0, 0, 0, 0.7);
+    transition: font-size 0.3s ease;
+}
+
+.hero h1:hover {
+    font-size: 4.8rem;
+}
+
+.hero p {
+    font-size: 1.6rem;
+    margin-top: 10px;
+    font-weight: 300;
+    transition: font-size 0.3s ease;
+    color: #fff; /* Set font color to white */
+}
+
+.hero p:hover {
+    font-size: 1.8rem;
+}
+
+/* Container */
+.container {
+    width: 90%;
+    margin: auto;
+    overflow: hidden;
+    transition: width 0.3s ease;
+    font-family: 'Georgia', serif; /* Change font style */
+    font-size: 18px; /* Increase font size */
+    line-height: 1.6; /* Adjust line height for better readability */
+    color: #333; /* Set a comfortable text color */
+}
+
+/* Section Styles */
+section {
+    padding: 80px 0;
+    background: #fff;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1); /* Increased shadow for depth */
+    border-radius: 15px; /* More rounded section edges */
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+section:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* More pronounced shadow on hover */
+}
+
+/* Card Container */
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px; /* Increased gap for better spacing */
+    justify-content: center;
+    transition: gap 0.3s ease;
+}
+
+/* Card Styles */
+.card {
+    border: none;
+    border-radius: 15px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    overflow: hidden;
+    transition: all 0.3s ease, transform 0.3s ease;
+    background: linear-gradient(135deg, #8e2de2, #4a00e0); /* Vibrant gradient background */
+    width: 100%;
+    max-width: 350px;
+    position: relative;
+    z-index: 1;
+    color: #fff; /* White text for contrast */
+}
+
+.card::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.1); /* Subtle light overlay */
+    z-index: -1;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-10px) scale(1.05); /* Lift and zoom effect */
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.3); /* Enhanced shadow on hover */
+}
+
+.card-body {
+    padding: 25px; /* Slightly increased padding */
+    transition: padding 0.3s ease;
+}
+
+/* Card Title */
+.card-title {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-weight: 600;
+    transition: font-size 0.3s ease, color 0.3s ease;
+    color: #fff; /* Keep title text white */
+}
+
+.card-title:hover {
+    font-size: 2.2rem;
+    color: #ffcc00; /* Gold color change on hover */
+}
+
+/* Card Text */
+.card-text {
+    font-size: 1.3rem;
+    color: #eee; /* Light grey text for contrast */
+    transition: font-size 0.3s ease;
+}
+
+.card-text:hover {
+    font-size: 1.5rem;
+}
+
+/* Achievements Section */
+.achievements ul {
+    padding: 0;
+    list-style: none;
+    transition: padding 0.3s ease;
+}
+
+.achievements li {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    position: relative;
+    padding-left: 35px;
+    transition: font-size 0.3s ease, color 0.3s ease;
+    font-family: 'Merriweather', serif; /* Unique font for achievements */
+}
+
+.achievements li::before {
+    content: "✔";
+    color: #ff6347;
+    font-size: 1.5rem;
+    position: absolute;
+    left: 0;
+    top: 0;
+    transition: transform 0.3s ease;
+}
+
+.achievements li:hover {
+    font-size: 1.6rem;
+    color: #003366; /* Color change on hover */
+}
+
+.achievements li:hover::before {
+    transform: scale(1.2);
+}
+
+/* Skills Section */
+.skills {
+    background: url('riku-lu-wvJuYrM5iuw-unsplash.jpg') no-repeat center center/cover;
+    padding: 80px 0;
+    border-radius: 20px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+    margin-bottom: 40px;
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+    color: #ffffff; /* Ensure text color contrasts with the background */
+}
+
+.skills:hover {
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skills h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 40px;
+    text-align: center;
+    color: #ffffff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black shadow for better readability */
+}
+
+.skills ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 30px;
+}
+
+.skills li {
+    background: rgba(255, 255, 255, 0.8); /* Semi-transparent background to ensure readability */
+    border-radius: 12px;
+    padding: 25px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    width: 200px;
+    max-width: 100%;
+    color: #380000; /* White text color */
+    font-family: 'Georgia', serif; /* Font family for consistency */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Black shadow effect */
+}
+
+.skills li:hover {
+    background: #003366;
+    color: #ffffff; /* Ensure text remains white on hover */
+    transform: translateY(-5px);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.skills i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+    transition: color 0.3s ease;
+    color: #f3f3f3; /* White icon color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Black shadow effect for icons */
+}
+
+.skills li:hover i {
+    color: #ff6347; /* Change icon color on hover */
+}
+
+.skills p {
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+    color: #ffffff; /* White text color */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8); /* Black shadow effect */
+}
+
+
+/* Certifications Section */
+.certifications {
+    background: #fff;
+    background: url('kelly-sikkema-v9FQR4tbIq8-unsplash.jpg') no-repeat center center/cover;
+    padding: 60px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.3s ease, background-color 0.3s ease;
+}
+
+.certifications:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certifications h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #feffff;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+
+}
+
+.certifications ul {
+    padding: 0;
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.certifications li {
+    background: #e0e0e0;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    width: 250px;
+}
+
+.certifications li:hover {
+    background: #003366;
+    color: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.certifications i {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+
+.certifications p {
+    font-size: 1.2rem;
+    font-family: 'Georgia', serif;
+}
+h3 {
+    color: #ffffff; /* Set text color to white */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+}
+
+
+/* Experience Section */
+.experience {
+    background: url('joanna-kosinska-1_CMoFsPfso-unsplash.jpg') no-repeat center center/cover;
+    padding: 80px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff; /* Ensure text color contrasts with the background */
+}
+
+.experience h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black shadow for better readability */
+}
+
+.experience .job {
+    margin-bottom: 20px;
+    transition: margin-bottom 0.3s ease;
+}
+
+.experience .job:hover {
+    margin-bottom: 30px; /* Increased margin on hover for emphasis */
+}
+.about {
+    background: url('and-machines--9aygGTfubo-unsplash.jpg') no-repeat center center/cover;
+    padding: 80px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff; /* Ensure text color contrasts with the background */
+}
+
+.about h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #ffffff; /* White text color */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Black shadow for better readability */
+}
+
+.about p {
+    font-size: 1.4rem;
+    margin-bottom: 15px;
+    line-height: 1.6;
+    color: #ffffff;
+}
+
+
+/* Projects Section */
+.projects {
+    background: url('estee-janssens-zni0zgb3bkQ-unsplash.jpg') no-repeat center center/cover;
+    padding: 80px 0;
+    border-radius: 15px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+    color: #ffffff; /* Ensure text color contrasts with the background */
+}
+
+.projects h2 {
+    font-family: 'Merriweather', serif;
+    font-size: 2.5rem;
+    margin-bottom: 30px;
+    text-align: center;
+    color: #000000; /* White text color */
+    text-shadow: 2px 2px 4px rgba(220, 198, 0, 0.8); /* Black shadow for better readability */
+}
+
+.projects .project-item {
+    background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent background for project items */
+    border-radius: 10px;
+    padding: 20px;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.projects .project-item:hover {
+    transform: scale(1.05);
+    background-color: rgba(0, 0, 0, 0.8); /* Darker background on hover */
+}
+
+.projects .project-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    color: #ffcc00; /* Gold color for project titles */
+}
+
+.projects .project-item p {
+    font-size: 1.2rem;
+    color: #ffffff; /* White text for project descriptions */
+    line-height: 1.6;
+}
+
+.projects .project-item a {
+    color: #ff6347;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.projects .project-item a:hover {
+    color: #ff4500;
+}
